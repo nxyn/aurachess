@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraChess</title>
+    <link rel="stylesheet" href="ain.css">
+    <script src="aura_ui.js" defer></script>
+</head>
+<body>
+    <h1>AuraChess</h1>
+
+    <div class="card">
+        <h2>Status</h2>
+        <div class="control-group">
+            <span>Engine:</span>
+            <span><div id="status-dot" class="status-indicator"></div> <span id="status-text">Ready</span></span>
+        </div>
+        <div class="control-group">
+            <label for="show-overlay">Show Overlay</label>
+            <input type="checkbox" id="show-overlay" class="toggle-switch">
+        </div>
+        <div class="control-group">
+            <label for="auto-play">Auto Play (Premium)</label>
+            <input type="checkbox" id="auto-play" class="toggle-switch">
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Configuration</h2>
+        <div class="control-group">
+            <label for="mode-select">Mode</label>
+            <select id="mode-select">
+                <option value="HUNT">Hunt (Best)</option>
+                <option value="HUMN">Human</option>
+                <option value="NURL">Neural</option>
+                <option value="STYK">Style</option>
+                <option value="HBRY">Fusion</option>
+            </select>
+        </div>
+
+        <div class="control-group" id="human-level-group" style="display:none;">
+            <label for="human-level">Human Level</label>
+            <input type="range" id="human-level" min="1" max="8" value="8">
+            <span id="human-level-val">8</span>
+        </div>
+
+        <div class="control-group" id="style-group" style="display:none;">
+            <label for="style-select">Style</label>
+            <select id="style-select">
+                <option value="1">Scared</option>
+                <option value="2">Defense</option>
+                <option value="3">Balanced</option>
+                <option value="4">Attack</option>
+                <option value="5">Ruthless</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+             <label for="auto-queue">Auto Queue</label>
+             <input type="checkbox" id="auto-queue" class="toggle-switch">
+        </div>
+    </div>
+
+    <div class="card">
+        <button id="reset-config">Reset Configuration</button>
+    </div>
+</body>
+</html>
