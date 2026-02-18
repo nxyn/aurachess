@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 350px;
+    height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #8A2BE2 #000000;
+}
+
+h1 {
+    text-align: center;
+    color: #8A2BE2;
+    text-shadow: 0 0 10px #8A2BE2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #cccccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.control-group {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-size: 14px;
+}
+
+/* Switches and Inputs */
+select, input[type="range"] {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+button:hover {
+    background: #9b4de6;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Custom Checkbox/Toggle */
+.toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    outline: none;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-switch:checked {
+    background: #8A2BE2;
+}
+
+.toggle-switch:checked::after {
+    transform: translateX(20px);
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff4444;
+    margin-right: 5px;
+}
+
+.status-active {
+    background: #00ff00;
+    box-shadow: 0 0 8px #00ff00;
+}
